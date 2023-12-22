@@ -1,8 +1,11 @@
 import React, { useEffect, useState} from "react";
-export const ResultNotFound = ()=>{
+export const ResultNotFound = ({searchValue})=>{
   return <>
           <article className="widget">
-          <h1>Result not found....</h1>
+          {
+            searchValue == "" ?  <h1 style={{textAlign:"center",width:"100%"}}>Please Enter Your City Name</h1> :  <h1 style={{textAlign:"center",width:"100%"}}>Please Enter Valid City Name</h1>
+          }
+         
           </article>
   </>
 }

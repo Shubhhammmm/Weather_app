@@ -3,7 +3,7 @@ import Weathercard, { ResultNotFound } from "./Weathercard";
 import "./style.css";
 
 const Temp = () => {
-  const [searchValue, setSearchValue] = useState("Amravati");
+  const [searchValue, setSearchValue] = useState("");
   const [tempInfo, setTempInfo] = useState({});
   const [result, setResult] = useState(false);
 
@@ -65,7 +65,7 @@ const Temp = () => {
         </div>
       </div>
 
-      {result?<Weathercard tempInfo={tempInfo} />:<ResultNotFound/>}
+      {result?<Weathercard tempInfo={tempInfo} />:<ResultNotFound searchValue ={searchValue} />}
       
     </>
   );
